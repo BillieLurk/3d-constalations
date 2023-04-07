@@ -5,7 +5,7 @@ import { Scene } from 'three';
 import { MeshLine, MeshLineMaterial, MeshLineRaycast } from 'three.meshline';
 
 const maxConnections = 4;
-const maxConnectionDist = 5;
+const maxConnectionDist = 4000;
 const textScale = 0.002;
 
 const bounds = 3;
@@ -69,7 +69,7 @@ class Node extends THREE.Object3D {
     }
 
     tick() {
-
+        
         this.nodeObject.position.add(this.velocity);
 
         if (this.label !== null) {
