@@ -19,11 +19,11 @@ const canvas = document.querySelector("canvas.webgl");
 // Scene
 const scene = new THREE.Scene();
 
-scene.background = new THREE.Color(0xffffff);
-scene.fog = new THREE.Fog(0xffffff, 0, 20);
+scene.background = new THREE.Color(0xeeeeee);
+scene.fog = new THREE.Fog(0xeeeeee, 0, 20);
 
 //grid plane object
-const gridHelper = new THREE.GridHelper(100, 100, 0x999999, 0xaaaaaa);
+const gridHelper = new THREE.GridHelper(100, 100, 0xffffff, 0xffffff);
 gridHelper.position.y = -1.5;
 
 scene.add(gridHelper);
@@ -37,7 +37,7 @@ for (let i = 0; i < nodeCount; i++) {
   const size = 0.3;
   const label = i;
   if (i % 2 == 0) {
-    const node = new Node(new Vector3(x, y, z), size, "", 0xaaaaaa, 0);
+    const node = new Node(new Vector3(x, y, z), size, "", 0xffffff, 0);
     nodes.push(node);
     scene.add(node);
   } else {

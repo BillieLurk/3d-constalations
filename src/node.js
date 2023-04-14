@@ -114,7 +114,8 @@ class Node extends THREE.Object3D {
           this.position.y * this.position.y +
           this.position.z * this.position.z
       );
-      this.label = this.distance.toFixed(6);
+      this.label = this.distance*100;
+      this.label = this.label.toFixed(3);
       this.updateTextLabel(this.label);
     }
 
